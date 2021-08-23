@@ -1,3 +1,5 @@
+-var titulo = "Título Principal"
+-var titulos = ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
 doctype html
 html
 	head
@@ -11,19 +13,13 @@ html
 			//- : un solo elemento hijo
 			.intro__imagen: img(src="images/imagen.png", alt="")
 			.intro__contenido
-				h2 Titulo Principal 
-				//- De esta forma, todo el contenido se encuentra en p
-				//- p.
-				//- 	Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				//- 	Distinctio ullam magni consectetur sunt accusantium dolores sequi 
-				//- 	nihil optio mollitia quae, expedita repellat minima quo totam temporibus, 
-				//- 	architecto ab incidunt vero.
-				//- //- Esta es otra forma de Interpolación
-				//- span
-				//- 	| Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-				//- 	| Incidunt laborum inventore commodi molestiae, explicabo soluta veniam 
-				//- 	| corrupti delectus, placeat, est maiores alias. Mollitia, fugit. 
-				//- 	| Eligendi laborum nisi fuga nobis corporis.
+				//- Element= Nota que va sin espacio
+				//- h2= titulo
+				//- Esta es otra forma
+				//- h2 #{titulo}
+				h2 #{titulos[0]}
+				//- Del primer elemento del array, toma la letra con índice 1
+				//- h2 #{titulos[0][1]} 
 				p
 					| Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 					| Commodi accusantium molestiae saepe maxime repudiandae exercitationem 
