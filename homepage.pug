@@ -1,3 +1,13 @@
 extend components/plantilla.pug
-block contenidos 
-    h1 Homepage
+block contenidos
+    div.container
+        div.menu
+            h3 Menu
+            ul
+                each enlace in enlaces 
+                    li=enlace
+        div.content
+            h3 #{titulo}
+            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum, tempore labore, nesciunt exercitationem, dolorum doloremque veniam repellat magnam debitis asperiores rem mollitia molestias deleniti. Nemo quibusdam error molestiae nobis?Mollitia, ea perspiciatis a deleniti ipsam dolorem voluptatum? Qui error voluptas, rem, at dolore est repellat voluptate id molestiae perspiciatis sint culpa aliquam aspernatur a corrupti, doloremque ab! Aliquam, cupiditate.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi recusandae voluptate consectetur, mollitia maiores corporis incidunt necessitatibus alias sapiente dolorem modi beatae ipsam, ea quas tempora at laboriosam natus et?Dolore vel dicta velit corrupti cum at iste explicabo dignissimos, veniam id pariatur, doloribus eius soluta nobis necessitatibus? Dignissimos ad veniam unde assumenda quis in. Tempore, dolores deserunt. Deleniti, ipsum?
+            a.boton Ver Más
