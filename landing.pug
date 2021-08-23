@@ -1,5 +1,13 @@
 -var titulo = "Título Principal"
--var titulos = ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
+-var titulos = ["Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
+-var usuario = "Mitchell"
+mixin caja(imagen, titulo, contenido)
+	.caja 
+		.caja__imagen: img(src="images/"+imagen, alt="Imagen")
+		.caja__contenido 
+			h3= titulo
+			p=contenido
+
 doctype html
 html
 	head
@@ -8,18 +16,14 @@ html
 	body
 		header
 			h1 PlatziGames
-			a.boton Registro
+			if usuario
+				a Hola #{usuario}
+			else
+				a.boton Registro
 		section.intro
-			//- : un solo elemento hijo
-			.intro__imagen: img(src="images/imagen.png", alt="")
+			.intro__imagen: img(src="images/imagen.png", alt="Imagen")
 			.intro__contenido
-				//- Element= Nota que va sin espacio
-				//- h2= titulo
-				//- Esta es otra forma
-				//- h2 #{titulo}
-				h2 #{titulos[0]}
-				//- Del primer elemento del array, toma la letra con índice 1
-				//- h2 #{titulos[0][1]} 
+				h2 #{titulo}
 				p
 					| Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 					| Commodi accusantium molestiae saepe maxime repudiandae exercitationem 
@@ -27,3 +31,14 @@ html
 					| doloremque impedit debitis? Vitae, atque.
 					span Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non in asperiores consequatur molestiae suscipit porro, animi quo! Eligendi debitis assumenda accusantium tempore cupiditate sapiente est veritatis, voluptatibus tenetur doloremque?
 				button.boton Leer
+		main.contenido
+			+caja("imagen.png", titulos[0], "Lorem ipsum dolor sit amet")
+			+caja("imagen.png", titulos[1], "Lorem ipsum dolor sit amet")
+			+caja("imagen.png", titulos[2], "Lorem ipsum dolor sit amet")
+			//- En vez de hacer todo esto manualmente por cada caja, usaremos un mixin 
+			//- .caja 
+			//- 	.caja__imagen: img(src="images/imagen.png", alt="Imagen")
+			//- 	.caja__contenido 
+			//- 		h3 #{titulos[0]}
+			//- 		p Lorem ipsum dolor sit amet
+
