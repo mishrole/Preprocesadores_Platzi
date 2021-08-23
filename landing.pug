@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		link(rel="stylesheet",href='css/ejercicio-pug.css')
+	body
+		header
+			h1 PlatziGames
+			a.boton Registro
+		section.intro
+			//- : un solo elemento hijo
+			.intro__imagen: img(src="images/imagen.png", alt="")
+			.intro__contenido
+				h2 Titulo Principal 
+				//- De esta forma, todo el contenido se encuentra en p
+				//- p.
+				//- 	Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				//- 	Distinctio ullam magni consectetur sunt accusantium dolores sequi 
+				//- 	nihil optio mollitia quae, expedita repellat minima quo totam temporibus, 
+				//- 	architecto ab incidunt vero.
+				//- //- Esta es otra forma de Interpolación
+				//- span
+				//- 	| Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+				//- 	| Incidunt laborum inventore commodi molestiae, explicabo soluta veniam 
+				//- 	| corrupti delectus, placeat, est maiores alias. Mollitia, fugit. 
+				//- 	| Eligendi laborum nisi fuga nobis corporis.
+				p
+					| Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					| Commodi accusantium molestiae saepe maxime repudiandae exercitationem 
+					| dolorem reiciendis fuga laboriosam culpa ex iusto modi dicta beatae, 
+					| doloremque impedit debitis? Vitae, atque.
+					span Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non in asperiores consequatur molestiae suscipit porro, animi quo! Eligendi debitis assumenda accusantium tempore cupiditate sapiente est veritatis, voluptatibus tenetur doloremque?
+				button.boton Leer
